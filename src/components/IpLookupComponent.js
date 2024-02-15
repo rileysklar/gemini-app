@@ -6,7 +6,7 @@ const IpLookupComponent = () => {
   const [cityName, setCityName] = useState(""); // Initialize state to hold the city name
 
   useEffect(() => {
-    const apiUrl = "https://freeipapi.com/api/json"; // Note: Ensure this API supports CORS and is correct
+    const apiUrl = "https://freeipapi.com/api/json"; //
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -17,19 +17,30 @@ const IpLookupComponent = () => {
           data.regionName,
           data.cityName
         );
-        setCountryName(data.countryName); // Update state with the fetched country code
-        setRegionName(data.regionName); // Update state with the fetched region name
-        setCityName(data.cityName); // Update state with the fetched city name
+        setCountryName(data.countryName);
+        setRegionName(data.regionName);
+        setCityName(data.cityName);
       })
       .catch((error) => console.error("Error fetching IP info:", error));
-  }, []); // Empty dependency array ensures this runs once on component mount
+  }, []);
 
   return (
     <div>
       {countryName && regionName && cityName && (
         <div>
-          Thank you for visiting our website from {cityName}, {regionName},{" "}
-          {countryName}.
+          <p>Thank you for visiting our website from</p>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              cityName
+            )},+${encodeURIComponent(regionName)},+${encodeURIComponent(
+              countryName
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {cityName}, {regionName}, {countryName}
+          </a>
+          .
         </div>
       )}
     </div>

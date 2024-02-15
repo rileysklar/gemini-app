@@ -20,7 +20,7 @@ function App() {
       <main className="main">
         <section className="hero">
           <h2>Creating Innovative Solutions with Technology</h2>
-          <IpLookupComponent />
+
           <p>
             As a dedicated software developer based in Austin, Texas, I
             specialize in crafting custom software solutions that meet the
@@ -68,7 +68,8 @@ function App() {
         </section>
       </main>
       <footer className="footer">
-        <p>© 2024 Riley Sklar. All rights reserved.</p>
+        <IpLookupComponent />
+        <p>© 2024 Riley Sklar.</p>
       </footer>
     </div>
   );
