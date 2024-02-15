@@ -1,25 +1,35 @@
-{
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+/* Adjust background color for dark mode */
+.dark-mode .landing-page {
+  background-color: #222; /* Or a slightly lighter/darker shade for preference */
+  color: #fff; /* High-contrast text color */
+}
+
+/* Use subtle images cautiously */
+.hero {
+  background-image: url(path/to/subtle-food-image.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9; /* Maintain text readability */
+}
+
+/* Introduce accent colors carefully */
+.order-now-button {
+  background-color: #007bff; /* Primary button */
+  border-color: transparent; /* Remove default button border */
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); /* Subtle depth/drop shadow */
+}
+
+.submit-button {
+  background-color: #f7931a; /* Secondary button (e.g., for form) */
+}
+
+/* Consider bento-inspired elements subtly */
+.option-cards {
+  border-radius: 5px; /* Rounded corners for a hint of bento box shape */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Media queries for responsiveness (adjust as needed) */
+@media (max-width: 768px) {
+  /* Adjust content layout and styles for smaller screens */
 }
