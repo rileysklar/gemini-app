@@ -19,7 +19,7 @@ function App() {
       </header>
       <main className="main">
         <section className="hero">
-          <h2>Creating Innovative Solutions with Technology</h2>
+          <h2>Software Developer</h2>
 
           <p>
             As a dedicated software developer based in Austin, Texas, I
